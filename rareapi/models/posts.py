@@ -9,4 +9,4 @@ class Post(models.Model):
     image_url = models.CharField()
     content = models.CharField()
     approved = models.BooleanField()
-    publication_date = models.DateTimeField()
+    publication_date = models.DateField()
