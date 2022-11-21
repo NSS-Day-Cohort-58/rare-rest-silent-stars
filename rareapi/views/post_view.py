@@ -11,6 +11,12 @@ class PostView(ViewSet):
         posts = Post.objects.all()
         serialized = PostSerializer(posts, many=True)
         return Response(serialized.data, status=status.HTTP_200_OK)
+    
+    def retrieve(self, request, pk):
+        
+        post = Post.objects.get(pk=pk)
+        serializer = PostSerializer(post)
+        return Response(serializer.data)
 
 
 class PostSerializer(serializers.ModelSerializer): 
