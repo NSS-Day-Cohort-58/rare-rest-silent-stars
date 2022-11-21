@@ -9,7 +9,7 @@
             "content": "This is the first post and it has an amazing story, look at the pictures",
             "category": 3,
             "publication_date": "2022-11-15",
-            "header_image_url": "https://loremflickr.com/640/360",
+            "image_url": "https://loremflickr.com/640/360",
             "approved":true
         }
     },
@@ -22,7 +22,7 @@
             "category": 3,
             "publication_date": "2022-11-15",
             "content": "You got to love Thanksgiving, see my awesome pic, chicken or turkey?",
-            "header_image_url": "https://baconmockup.com/640/360",
+            "image_url": "https://baconmockup.com/640/360",
             "approved":true
         }
     },
@@ -35,7 +35,7 @@
             "content": "Enjoy repetition? tell me about it, this is the best repeated pic",
             "category": 3,
             "publication_date": "2022-11-15",
-            "header_image_url": "https://loremflickr.com/640/360",
+            "image_url": "https://loremflickr.com/640/360",
             "approved":true
         }
     }
