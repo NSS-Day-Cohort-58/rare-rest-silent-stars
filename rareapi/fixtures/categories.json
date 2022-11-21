@@ -1,0 +1,23 @@
+[
+{
+    "model": "rareapi.category",
+    "pk": 1,
+    "fields": {
+        "label": "Test 1"
+    }
+},
+{
+    "model": "rareapi.category",
+    "pk": 2,
+    "fields": {
+        "label": "Test 2"
+    }
+},
+{
+    "model": "rareapi.category",
+    "pk": 3,
+    "fields": {
+        "label": "Test 3"
+    }
+}
+]
