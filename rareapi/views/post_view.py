@@ -22,7 +22,10 @@ class PostView(ViewSet):
         post.image_url = request.data["image_url"]
         post.content = request.data["content"]
         post.approved = request.data["approved"]
-        post.dateTime = request.data["dateTime"]
+        post.publication_date = request.data["publication_date"]
+        post.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 
 
@@ -30,4 +33,4 @@ class PostView(ViewSet):
 class PostSerializer(serializers.ModelSerializer): 
     class Meta: 
         model = Post
-        fields = ('id', 'user', 'tags', 'category', 'title', 'image_url', 'content', 'approved', 'dateTime')
+        fields = ('id', 'user', 'tags', 'category', 'title', 'image_url', 'content', 'approved', 'publication_date')
