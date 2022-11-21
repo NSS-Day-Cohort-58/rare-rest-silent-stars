@@ -15,22 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-<<<<<<< HEAD
 from rest_framework import routers
-from rareapi.views import PostView
+from rest_framework import include 
+from rareapi.views import PostView, CategoryView
+from rareapi.views import register_user, login_user 
 
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'posts', PostView, 'post')
-=======
-from raresiletstars.views import register_user, login_user
-from django.conf.urls import include
-from rest_framework import routers
-from raresiletstars.views import CategoryView
-
-router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'categories', CategoryView, 'category')
->>>>>>> 7b71fd44cb8dc7404f1497a19bf2618288c4afcd
 
 urlpatterns = [
     path('register', register_user),
