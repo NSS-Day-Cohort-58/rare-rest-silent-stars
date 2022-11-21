@@ -25,11 +25,10 @@ class PostView(ViewSet):
         post.publication_date = request.data["publication_date"]
         post.save()
 
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
-
-
         serializer = PostSerializer(post)
         return Response(serializer.data)
+
+
     
     def destroy(self, request, pk):
         post = Post.objects.get(pk=pk)
