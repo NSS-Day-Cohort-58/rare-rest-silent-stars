@@ -8,7 +8,7 @@ class CommentView(ViewSet):
 
     def create(self, request):
 
-        author = User.objects.get(user=request.auth.user)
+        author = RareUser.objects.get(user=request.auth.user)
         post = Post.objects.get(pk=request.data[postId])
         
         category = Comment.objects.create(
