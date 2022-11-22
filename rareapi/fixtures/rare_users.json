@@ -4,7 +4,8 @@
         "pk": 1,
         "fields": {
             "user": 1,
-            "bio": "Carrie"
+            "bio": "Carrie",
+            "profileImg": ""
         }
     }, 
     {
@@ -12,7 +13,8 @@
         "pk": 2,
         "fields": {
             "user": 2,
-            "bio": "Bob"
+            "bio": "Bob",
+            "profileImg": ""
         }
     }, 
     {
@@ -20,7 +22,8 @@
         "pk": 3,
         "fields": {
             "user": 3,
-            "bio": "Sam"
+            "bio": "Sam",
+            "profileImg": ""
         }
     }
 ]
