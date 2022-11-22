@@ -1,0 +1,26 @@
+[
+    {
+        "model": "rareapi.rare_user",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "bio": "Carrie"
+        }
+    }, 
+    {
+        "model": "rareapi.rare_user",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "bio": "Bob"
+        }
+    }, 
+    {
+        "model": "rareapi.rare_user",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "bio": "Sam"
+        }
+    }
+]
