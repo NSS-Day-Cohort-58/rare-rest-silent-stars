@@ -41,7 +41,7 @@ def register_user(request):
 
     rareUser = RareUser.objects.create(
         bio=request.data['bio'],
-        profileImg=request.data['profileImg'],
+        profile_image=request.data['profileImg'],
         user=new_user
     )
 
