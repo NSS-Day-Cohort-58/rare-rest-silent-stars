@@ -2,14 +2,14 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from rareapi.models import Comment
+from rareapi.models import Comment, RareUser, Post
 
 class CommentView(ViewSet):
 
     def create(self, request):
 
         author = RareUser.objects.get(user=request.auth.user)
-        post = Post.objects.get(pk=request.data[postId])
+        post = Post.objects.get(pk=request.data["postId"])
         
         category = Comment.objects.create(
             content=request.data["content"],
