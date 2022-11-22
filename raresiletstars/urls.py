@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
-from rest_framework import include 
+from django.conf.urls import include 
 from rareapi.views import PostView, CategoryView, TagView
 from rareapi.views import register_user, login_user 
 

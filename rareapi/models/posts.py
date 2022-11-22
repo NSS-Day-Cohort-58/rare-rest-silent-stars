@@ -1,12 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 class Post(models.Model): 
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    tags =  models.ManyToManyField("Tags", through="PostTag")
+    user = models.OneToOneField("RareUser", on_delete=models.CASCADE)
+    tags =  models.ManyToManyField("Tag", through="PostTag")
     category = models.ForeignKey("Category", null=True, blank=True, on_delete =models.CASCADE)
     title = models.CharField(max_length=24)
-    image_url = models.CharField()
-    content = models.CharField()
+    image_url = models.CharField(max_length=400)
+    content = models.CharField(max_length=200)
     approved = models.BooleanField()
     publication_date = models.DateField()
