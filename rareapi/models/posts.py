@@ -1,7 +1,7 @@
 from django.db import models
 
-class Post(models.Model): 
-    user = models.OneToOneField("RareUser", on_delete=models.CASCADE)
+class Post(models.Model):
+    user = models.ForeignKey("RareUser", on_delete=models.CASCADE)
     tags =  models.ManyToManyField("Tag", through="PostTag")
     category = models.ForeignKey("Category", null=True, blank=True, on_delete =models.CASCADE)
     title = models.CharField(max_length=24)
