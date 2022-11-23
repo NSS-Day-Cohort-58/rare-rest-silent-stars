@@ -2,9 +2,15 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from rareapi.models import Comment
+from rareapi.models import Comment, RareUser, Post
 
 class CommentView(ViewSet):
+
+    def list(self, request): 
+
+        comments = Comment.objects.all()
+        serialized = CommentSerializer(comments, many=True)
+        return Response(serialized.data, status=status.HTTP_200_OK)
 
     def create(self, request):
 
@@ -23,5 +29,5 @@ class CommentSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Comment
-        fields = ('id', 'user', 'post', 'content') 
+        fields = ('id', 'author', 'post', 'content') 
 
