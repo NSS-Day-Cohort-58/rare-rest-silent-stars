@@ -8,8 +8,8 @@ class TagView(ViewSet):
 
     def list(self, request):
 
-        tags = Tag.objects.all().order_by('label').values()
-        serialized = TagSerializer(tags, many=True)
+        tag = Tag.objects.all().order_by('label').values()
+        serialized = TagSerializer(tag, many=True)
         return Response(serialized.data, status=status.HTTP_200_OK)
 
 
@@ -34,6 +34,7 @@ class TagView(ViewSet):
 
 class TagSerializer(serializers.ModelSerializer):
 
-    model = Tag
-    fields = ('id', 'label')
+    class Meta:
+        model = Tag
+        fields = ('id', 'label')
     
