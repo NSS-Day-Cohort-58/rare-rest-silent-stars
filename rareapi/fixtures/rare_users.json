@@ -1,29 +1,29 @@
 [
     {
-        "model": "rareapi.rare_user",
+        "model": "rareapi.rareuser",
         "pk": 1,
         "fields": {
             "user": 1,
             "bio": "Carrie",
-            "profileImg": ""
+            "profile_image": ""
         }
-    }, 
+    },
     {
-        "model": "rareapi.rare_user",
+        "model": "rareapi.rareuser",
         "pk": 2,
         "fields": {
             "user": 2,
             "bio": "Bob",
-            "profileImg": ""
+            "profile_image": ""
         }
-    }, 
+    },
     {
-        "model": "rareapi.rare_user",
+        "model": "rareapi.rareuser",
         "pk": 3,
         "fields": {
             "user": 3,
             "bio": "Sam",
-            "profileImg": ""
+            "profile_image": ""
         }
     }
 ]
