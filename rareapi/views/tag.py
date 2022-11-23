@@ -7,10 +7,10 @@ from rareapi.models import Tag
 class TagView(ViewSet):
 
     def list(self, request):
-        tags = Tag.objects.all().order_by('label').values()
 
-        serializer = TagSerializer(tags, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        tags = Tag.objects.all().order_by('label').values()
+        serialized = TagSerializer(tags, many=True)
+        return Response(serialized.data, status=status.HTTP_200_OK)
 
 
     def create(self, request): 
