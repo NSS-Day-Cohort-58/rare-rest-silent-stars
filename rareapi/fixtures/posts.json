@@ -1,27 +1,26 @@
 [
     {
-        "model": "rareapi.posts",
+        "model": "rareapi.post",
         "pk": 1,
         "fields": {
             "user": 1,
-            "label": "Test 1",
-            "tag": 1,
-            "title":"Best First Post!",
-            "content": "This is the first post and it has an amazing story, look at the pictures",
+            "tags": 1,
             "category": 3,
-            "publication_date": "2022-11-15",
+            "title":"Best First Post!",
             "image_url": "https://loremflickr.com/640/360",
+            "content": "This is the first post and it has an amazing story, look at the pictures",
+            "publication_date": "2022-11-15",
             "approved":true
         }
     },
     {
-        "model": "rareapi.posts",
+        "model": "rareapi.post",
         "pk": 2,
         "fields": {
             "user": 1,
             "title":"Best Chicken Turkey Post",
             "category": 3,
-            "tag": 1,
+            "tags": 1,
             "publication_date": "2022-11-15",
             "content": "You got to love Thanksgiving, see my awesome pic, chicken or turkey?",
             "image_url": "https://baconmockup.com/640/360",
@@ -29,14 +28,14 @@
         }
     },
     {
-        "model": "rareapi.posts",
+        "model": "rareapi.post",
         "pk": 3,
         "fields": {
             "user": 2,
             "title":"Best First Secondary Post!",
             "content": "Enjoy repetition? tell me about it, this is the best repeated pic",
             "category": 3,
-            "tag": 1,
+            "tags": 1,
             "publication_date": "2022-11-15",
             "image_url": "https://loremflickr.com/640/360",
             "approved":true

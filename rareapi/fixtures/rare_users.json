@@ -1,6 +1,6 @@
 [
     {
-        "model": "rareapi.rare_user",
+        "model": "rareapi.rareuser",
         "pk": 1,
         "fields": {
             "user": 1,
@@ -9,7 +9,7 @@
         }
     }, 
     {
-        "model": "rareapi.rare_user",
+        "model": "rareapi.rareuser",
         "pk": 2,
         "fields": {
             "user": 2,
@@ -18,7 +18,7 @@
         }
     }, 
     {
-        "model": "rareapi.rare_user",
+        "model": "rareapi.rareuser",
         "pk": 3,
         "fields": {
             "user": 3,

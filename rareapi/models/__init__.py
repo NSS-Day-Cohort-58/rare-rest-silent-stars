@@ -1,4 +1,4 @@
-from .posts import Post
+from .post import Post
 from .category import Category
 from .post_tag import PostTag
 from .rare_user import RareUser
