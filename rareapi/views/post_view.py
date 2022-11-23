@@ -2,7 +2,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from rareapi.models import Post, Category
+from rareapi.models import Post, Category, Tag, RareUser
 
 class PostView(ViewSet): 
 
@@ -15,7 +15,7 @@ class PostView(ViewSet):
     def update(self, request, pk): 
 
         post = Post.objects.get(pk=pk)
-        post.user = User.objects.get(pk=request.data["user"])
+        post.user = RareUser.objects.get(pk=request.data["user"])
         post.tags = Tag.objects.get(pk=request.data["tag"])
         post.category = Category.objects.get(pk=request.data["category"])
         post.title = request.data["title"]
