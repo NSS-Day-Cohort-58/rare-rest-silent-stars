@@ -9,7 +9,9 @@ from rareapi.models import RareUser
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
+
 def login_user(request):
+    
     username = request.data['username']
     password = request.data['password']
 
@@ -39,13 +41,13 @@ def register_user(request):
         is_staff=request.data['is_staff']
     )
 
-    rareUser = RareUser.objects.create(
+    author = RareUser.objects.create(
         bio=request.data['bio'],
         profile_image=request.data['profile_image'],
         user=new_user
     )
 
-    token = Token.objects.create(user=rareUser.user)
+    token = Token.objects.create(user=author.user)
 
     data = { 'token': token.key }
     return Response(data)

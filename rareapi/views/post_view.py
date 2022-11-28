@@ -17,7 +17,8 @@ class PostView(ViewSet):
         post = Post.objects.get(pk=pk)
         post.user = RareUser.objects.get(pk=request.data["user"])
         post.tags = Tag.objects.get(pk=request.data["tag"])
-        post.category = Category.objects.get(pk=request.data["category"])
+        category = Category.objects.get(pk=request.data["category"])
+        post.category = category
         post.title = request.data["title"]
         post.image_url = request.data["image_url"]
         post.content = request.data["content"]
@@ -25,8 +26,9 @@ class PostView(ViewSet):
         post.publication_date = request.data["publication_date"]
         post.save()
 
-        serializer = PostSerializer(post)
-        return Response(serializer.data)
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        # serializer = PostSerializer(post)
+        # return Response(serializer.data)
 
 
     
@@ -35,8 +37,14 @@ class PostView(ViewSet):
         post.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ('id', 'label', )
 
 class PostSerializer(serializers.ModelSerializer): 
+    category = CategorySerializer(many=False)
     class Meta: 
         model = Post
-        fields = ('id', 'user', 'tags', 'category', 'title', 'image_url', 'content', 'approved', 'publication_date')
+        fields = ('id', 'user', 'tags', 'category', 'title', 'image_url', 'content', 'approved', 'publication_date',)
+        depth = 1
